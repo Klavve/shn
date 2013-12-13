@@ -1,0 +1,264 @@
+    <section id="search-result-title">
+      <div class="row">
+        <div class="twelvecol container last">
+          <h1>Din sökning på Samh&auml;llsnyttan, !</h1>
+        </div>
+      </div>
+    </section>
+    <section id="angular-google-map-view" class="container bgGrey">
+    <div id="angular-google-map-search-background" class="row">
+
+            <div id="angular-google-map" class="eightcol">
+            <div id="angular-google">
+ 
+<google-map class="angular-google-map" center="center" draggable="true" zoom="zoom" markers="markers" mark-click="true"></google-map>
+</div><!--id="search"-->
+</div><!--id="search-form"-->
+
+<!--SEARCH RIGHT-->
+    <div id="search-right-view" class="fourcol last">
+      <div id="search-right-padding">
+      <form id="samhallsnyttan-search-right" action="#/objects" method="post" ng-submit="submit()">
+    <label for="Samhallsnyttan"><h2>S&ouml;k p&aring; Samh&auml;llsnyttan</h2></label>
+
+    <div class="select-country float-left">
+   <label for="select-country"><h4>V&auml;lj land</h4></label>
+    <select name="select-country" id="select-country">
+      <option value="Belgien">Belgien</option>
+      <option value="Bulgarien">Bulgarien</option>
+      <option value="Cypern">Cypern</option>
+      <option value="Danmark">Danmark</option>
+      <option value="Estland">Estland</option>
+      <option value="Finland">Finland</option>
+      <option value="Frankrike">Frankrike</option>
+      <option value="Grekland">Grekland</option>
+      <option value="Grekland">Grekland</option>
+      <option value="Italien">Italien</option>
+      <option value="Kroatien">Kroatien</option>
+      <option value="Lettland">Lettland</option>
+      <option value="Litauen">Litauen</option>
+      <option value="Luxemburg">Luxemburg</option>
+      <option value="Malta">Malta</option>
+      <option value="Nederländerna">Nederländerna</option>
+      <option value="Polen">Polen</option>
+      <option value="Portugal">Portugal</option>
+      <option value="Rumänien">Rumänien</option>
+      <option value="Slovakien">Slovakien</option>
+      <option value="Slovenien">Slovenien</option>
+      <option value="Spanien">Spanien</option>
+      <option value="Storbritannien">Storbritannien</option>
+      <option value="Sverige" selected="selected">Sverige</option>
+      <option value="Tjeckien">Tjeckien</option>
+      <option value="Tyskland">Tyskland</option>
+      <option value="Ungern">Ungern</option>
+      <option value="Österrike">Österrike</option>
+    </select>
+</div>
+<div class="select-county float-left">
+    <label for="select-country"><h4>V&auml;lj l&auml;n</h4></label>
+    <select name="select-country" id="select-county">
+      <option value="Blekinge län">Blekinge</option>
+      <option value="Dalarnas län">Dalarnas</option>
+      <option value="Gotlands län">Gotlands</option>
+      <option value="Gävleborgs län">Gävleborgs</option>
+      <option value="Hallands län">Hallands</option>
+      <option value="Jämtlands län">Jämtlands</option>
+      <option value="Jönköpings län">Jönköpings</option>
+      <option value="Kalmar län">Kalmar</option>
+      <option value="Kronobergs län">Kronobergs</option>
+      <option value="Norrbottens län">Norrbottens</option>
+      <option value="Skåne län">Skåne</option>
+      <option value="Stockholms län">Stockholms</option>
+      <option value="Södermanlands län">Södermanlands</option>
+      <option value="Uppsala län">Uppsala</option>
+      <option value="Västernorrlands län">Västernorrlands</option>
+    </select>
+</div>
+<div class="select-municipality float-left">
+     <label for="select-municipality"><h4>V&auml;lj kommun</h4></label>
+    <select name="select-municipality" id="select-municipality">
+      <option value="Ale kommun">Ale</option>
+      <option value="Alingsås kommun">Alingsås</option>
+      <option value="Alvesta kommun">Alvesta</option>
+      <option value="Aneby kommun">Aneby</option>
+      <option value="Arboga kommun">Arboga</option>
+      <option value="Arjeplogs kommun">Arjeplogs</option>
+      <option value="Arvidsjaurs kommun">Arvidsjaurs</option>
+      <option value="Arvika kommun">Arvika</option>
+      <option value="Askersunds kommunun">Askersunds</option>
+      <option value="Avesta kommun">Avesta</option>
+      <option value="Hallstahammars kommun">Hallstahammars</option>
+      <option value="Skinnskattebergs kommun">Skinnskattebergs</option>
+      <option value="Upplands Väsby kommun">Upplands Väsby</option>
+      <option value="Malung-Sälens kommun">Malung-Sälens</option>
+
+    </select>
+</div>
+<div class="clear-both"></div>
+
+<div id="radio-checkbox" class="radio-checkbox-options float-left">
+<label for="radio-object"><h4>S&ouml;k objekt typ</h4></label>
+<ul class="radio-object">
+    <li><input id="forskola" type="radio" name="object-type" value="forskola" ng-model="checked"><label for="forskola">F&ouml;rskola</label></li>
+    <li><input id="grundskola" type="radio" name="object-type" value="grundskola" ng-model="checked"><label for="grundskola">Grundskola</label></li>
+    <li><input id="hogstadium" type="radio" name="object-type" value="hogstadium" ng-model="checked"><label for="hogstadium">H&ouml;gstadium</label></li>
+    <li><input id="gymnasium" type="radio" name="object-type" value="gymnasium" ng-model="checked"><label for="gymnasium">Gymnasium</label></li>
+</ul>
+
+ <ul class="radio-object">
+    <li><input id="aldreboende" type="radio" name="object-type" value="aldreboende" ng-model="checked"><label for="aldreboende">&Auml;ldreboende</label></li>
+    <li><input id="begravning" type="radio" name="object-type" value="begravning" ng-model="checked"><label for="begravning">Begravningsplatser</label></li>
+    <li><input id="badhus" type="radio" name="object-type" value="badhus" ng-model="checked"><label for="badhus">Badhus</label></li>
+    <li><input id="lekplatser" type="radio" name="object-type" value="lekplatser" ng-model="checked"><label for="lekplatser">Lekplatser</label></li>
+</ul>
+
+</div><!--id=radio-check-->
+
+<!--Förfina sökningen hide-->
+<div class="checkbox-object float-left">
+<label id="label-forskola" class="radio-option" for="radio-object" ng-show="checked == 'forskola' || checked == 'grundskola' || checked == 'hogstadium' || checked == 'gymnasium'"><h4>F&ouml;rfina s&ouml;kningen</h4></label> 
+<ul id="forskola-option" class="radio-option" ng-show="checked == 'forskola' || checked == 'grundskola' || checked == 'hogstadium' || checked == 'gymnasium'">
+    <div class="forskola"><li><input type="checkbox" name="checkbox-object" ng-model="Kommunal" ng-click="value1Clicked()"><label for="kommunal">Kommunal</label></li>
+    <div class="forskola"><li><input type="checkbox" name="checkbox-object" ng-model="Fristande" ng-click="value2Clicked()"><label for="fristande">Frist&aring;ende</label></li>
+    <div class="forskola"><li><input type="checkbox" name="checkbox-object" ng-model="Inriktning" ng-click="value3Clicked()"><label for="inriktning">Inriktning</label></li>
+</ul>
+    </div>
+
+    <div class="clear-both"></div>
+    
+<div class="submit">
+    <input id="submit" type="submit" value="S&ouml;k">
+  </div>
+
+</form>
+      </div>
+    </div><!--search-right-->
+
+</div><!--search-background-->
+</section>
+<!--FORM SLUT-->
+
+<div class="divider-top"></div>
+
+<!--                Object lista                        -->
+
+<section id="three-cols" class="container bgWhite">
+  <div class="row">
+    <div id="search-object-row" class="ninecol">
+<h1>Objekt rubrik, typ Lekplatser</h1>
+
+<!--START OBJECT LIST-->
+<ul class="search-object-list">
+  <li class="uneven clearfix">
+    <ul id="search-object-list-rate" class="search-object-left-col">
+<li><figure class="personal-img"><img src="images/bad.png" /></figure></li>
+<li><figure class="votestars"><img src="images/votestars100px.png" /></figure></li>
+<li><p class="smallText">4 stars av 120 r&ouml;ster</p><li>
+</ul><!--ul object-list-rate-->
+
+<dl id="search-object-list-content" class="search-object-right-col">
+  <dt><h3>Skogslekplatsen, rönneholmsvägen 10 Malmö</h3></dt>
+    <dd>
+<p class="smallText">
+Fin miljö med många val, barnen älskar att vara Bed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudant  doloremque, asldjasj oasdjoij oajs doijasodj ojoiadj soij oiajsdojoij aodj </p><p class="smallText">Asjkd aj dojaoisjd oa a sdoioija sodjojoaijsdoj oaisj do opaisjd oja osidjoj oasjd oijas</p>
+    </dd>
+</dl>
+</li>
+
+<li class="even clearfix">
+    <ul id="search-object-list-rate" class="search-object-left-col">
+<li><figure class="personal-img"><img src="images/lekplats.png" /></figure></li>
+<li><figure class="votestars"><img src="images/votestars100px.png" /></figure></li>
+<li><p class="smallText">4 stars av 120 r&ouml;ster</p><li>
+</ul><!--ul object-list-rate-->
+
+<dl id="search-object-list-content" class="search-object-right-col">
+  <dt><h3>Skogslekplatsen, rönneholmsvägen 10 Malmö</h3></dt>
+    <dd>
+<p class="smallText">
+Fin miljö med många val, barnen älskar att vara Bed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudant  doloremque
+</p>
+    </dd>
+</dl>
+</li>
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+</div><!--ninecol-->
+    <div class="threecol ad last">
+      <article>
+      <h4>Ad</h4>
+<ul>
+  <li><img src="images/ad02.png" /></li>
+  <li><img src="images/ad03.png" /></li>
+</ul>
+      </articel>
+    </div><!--FOURCOL-->
+
+  </div><!--ROW-->
+</section><!--SECTION-->
+
+<div class="divider-bottom"></div>
+
+<section id="video" class="container bgGrey">
+  <div class="row">
+    <div class="twelvecol last">
+      <articel>
+        <h1>En kort instruktions film om Samhällsnyttan</h1>
+      </articel>
+    </div><!--TWELEVECOL-->
+  </div><!--ROW-->
+</section><!--SLOGAN-->
+
+<section id="video-instruction" class="container bgGrey">
+  <div class="row">
+    <div class="fivecol">
+      <article>
+      <h2>Video instruktion</h2>
+<p>
+Under hösten 2012 gick jag till vår vanliga lekplats för att gunga med vår son Hugo. Han älskar gungor, men då han bara var 1 1/2 år så krävdes en gunga för små barn. Just vid detta tillfälle var dessa gungor på reparation och vart skulle vi då gå? Jag går alltid till samma lekplats, lite tråkigt kanske, men man vet vad man får. Jag hittade ingen information på kommunens hemsida och som tur är råkade det passera en man som skötte kommunens parker och jag kunde fråga honom. Då började jag fundera på möjligheten till en app med alla Sveriges lekplatser. Jag har sett hemsidor med lite liknande koncept, men de var inte heltäckande för Sverige. Jag har sett kommunappar som har bra beskrivning av lekplatser, men det hjälper ju inte när jag rör på mig mellan kommuner.
+</p>
+      </articel>
+    </div><!--NINECOL-->
+    <div class="sevencol last">
+      <h2>Video</h2>
+      <div class="video-holder">
+        <div class="video-content">
+<iframe src="http://player.vimeo.com/video/64179643?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div><!--video-conten-->
+</div><!--video-holder-->
+    </div><!--THREECOL-->
+  </div><!--ROW-->
+</section><!--SECTION-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

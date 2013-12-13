@@ -1,0 +1,50 @@
+<footer>
+<div class="container">
+	<div class="row">
+		<div class="twelvecol">
+    FOOTER FOOTER
+		</div>
+	</div>
+</div>
+<!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>-->
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+<script type="text/javascript" src="/js/waypoints.js"></script>
+<script type="text/javascript" src="/js/waypoints-sticky.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/angular-google-maps.js"></script>
+<!--Från axels angular lib-->
+<script src="js/libs/jquery-1.8.3.min.js"></script>
+<script src="js/libs/angular.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+<script src="js/shn/shn.libs.js"></script>
+<script src="js/shn/shn.script.js"></script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {//KUL VA????
+    $('input[type="radio"]').change(function() {
+        var rad = $(this).attr('id'); 
+            $('.radio-option').hide();
+            //$('#' + rad + '-option').siblings('ul').hide();          
+            $('#' + rad + '-option').show();
+            $('#' + 'label-' + rad).show();
+            });
+});
+</script>
+<script type="text/javascript">
+     $(document).ready(function () {
+        $('.sticky-navigation').waypoint('sticky');
+
+    });
+ </script>
+
+ <script type="text/javascript">
+//tom
+</script> 
+</footer>
+</body>
+</html>

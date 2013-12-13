@@ -1,0 +1,110 @@
+    <!doctype html>
+<html lang="en" ng-app="shn" ng-controller="MainCtrl">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }} - Samh&auml;llsnyttan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <!--<script src="../js/script.js"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js" data-semver="1.0.8"></script>
+     
+     <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">-->
+    
+    <!--<script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>-->
+   
+
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>-->
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico">
+    <link href="css/style.css" media="all" type="text/css" rel="stylesheet">
+
+    <!--[if IE 6]>
+        <link rel="stylesheet" type="text/css" href="ie6.css">
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="ie7.css">
+    <![endif]-->
+</head>
+    <body id="{{ bodyClass }}">
+        <header>
+            <section class="container">
+                <div class="row">
+                    <div class="twelvecol" id="bgBanner">
+                    </div><!--TWELVECOL-->
+                </div><!--ROW-->
+            </section><!--SECTION-->
+<section class="container menu sticky-navigation">
+    <div class="row">
+        <div class="twelvecol">
+            <div class="logo-banner">
+              <a href="#/hem"><img src="../images/samhallsnyttanlogo.png" alt="Samh&auml;llsnyttan logo hem" /></a>
+            </div>
+        <nav>
+            <ul class="nav">
+                <li><a href="#/headings" ng-class="{ active: isCurrentPath('/headings') }">Headings</a></li>
+                <li><a href="#/contact" ng-class="{ active: isCurrentPath('/kontakt') }">Kontakt</a></li>
+                <li><a href="#/press" ng-class="{ active: isCurrentPath('/press') }">Press</a></li>
+                <li><a href="#/samhallsnyttan-i-framtiden" ng-class="{ active: isCurrentPath('/samhallsnyttan-i-framtiden') }">Samh&auml;llsnyttan i framtiden</a></li>
+                <li><a href="#/hem" id="btn-home" ng-class="{ active: isCurrentPath('/hem') }">Hem</a></li>
+            </ul>
+        </nav>
+            <div class="clear-both"></div>
+        </div><!--TWELEVCOL-->
+    </div><!--ROW-->
+</section><!--SECTION-->
+</header>
+<body>
+  <div class="wrapper">
+  	<div ng-view=""></div>
+  </div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="twelvecol">
+      FOOTER FOOTER
+      </div>
+    </div>
+</div>
+<!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>-->
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+<script type="text/javascript" src="/js/waypoints.js"></script>
+<script type="text/javascript" src="/js/waypoints-sticky.js"></script>
+<!--<script src="js/app.js"></script>-->
+<script src="js/angular-google-maps.js"></script>
+<!--Från axels angular lib-->
+<script src="js/libs/jquery-1.8.3.min.js"></script>
+<script src="js/libs/angular.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+<script src="js/shn/shn.libs.js"></script>
+<script src="js/shn/shn.script.js"></script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {//KUL VA????
+    $('input[type="radio"]').change(function() {
+        var rad = $(this).attr('id'); 
+            $('.radio-option').hide();
+            //$('#' + rad + '-option').siblings('ul').hide();          
+            $('#' + rad + '-option').show();
+            $('#' + 'label-' + rad).show();
+            });
+});
+</script>
+<script type="text/javascript">
+     $(document).ready(function () {
+        $('.sticky-navigation').waypoint('sticky');
+
+    });
+ </script>
+
+ <script type="text/javascript">
+//tom
+</script> 
+</footer>
+</body>
+</html>
